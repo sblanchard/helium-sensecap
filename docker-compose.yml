@@ -122,4 +122,3 @@ volumes:
   pktfwdr:
   dbus:
   nebra:
-  watchdog-log:
