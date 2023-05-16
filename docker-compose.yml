@@ -37,8 +37,6 @@ services:
       - pktfwdr:/var/pktfwd
       - nebra:/var/nebra
     environment:
-      - FIRMWARE_VERSION=v1.0.2-14
-      - FIRMWARE_SHORT_HASH=f97cd6b
     labels:
       io.balena.features.sysfs: 1
       io.balena.features.procfs: 1
