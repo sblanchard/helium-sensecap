@@ -27,22 +27,6 @@ services:
       io.balena.features.dbus: 1
     stop_signal: SIGINT
 
-  packet-forwarder:
-    image: nebraltd/hm-pktfwd:3fa7955
-    depends_on:
-      - multiplexer
-    restart: always
-    privileged: true
-    volumes:
-      - pktfwdr:/var/pktfwd
-      - nebra:/var/nebra
-    environment:
-      - FIRMWARE_VERSION=v1.0.2-14
-      - FIRMWARE_SHORT_HASH=f97cd6b
-    labels:
-      io.balena.features.sysfs: 1
-      io.balena.features.procfs: 1
-
   multiplexer:
     image: nebraltd/hm-multiplexer:a1fc09b
     restart: always
